@@ -1,6 +1,6 @@
 {
   "name": "air-coap",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Library and CLI for controlling Philips air purifiers over encrypted CoAP",
   "license": "MIT",
   "homepage": "https://github.com/hazzik/air-coap#readme",
