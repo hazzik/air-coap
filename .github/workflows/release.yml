@@ -19,7 +19,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version: 26
       # npm publish runs the prepack script, which calls yarn; corepack runs the Yarn version from packageManager.
       - run: npm install --global corepack@latest
       - run: corepack enable
