@@ -1,0 +1,66 @@
+{
+  "name": "air-coap",
+  "version": "0.0.0",
+  "description": "Library and CLI for controlling Philips air purifiers over encrypted CoAP",
+  "license": "MIT",
+  "homepage": "https://github.com/hazzik/air-coap#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hazzik/air-coap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hazzik/air-coap/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/hazzik"
+  },
+  "keywords": [
+    "philips",
+    "air purifier",
+    "coap"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "aioairctrl": "dist/bin.js",
+    "air-coap": "dist/bin.js"
+  },
+  "files": [
+    "dist/"
+  ],
+  "engines": {
+    "node": "^22.0.0 || ^24.0.0 || ^26.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepack": "yarn build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "types": "tsc --noEmit && tsc --noEmit -p test"
+  },
+  "dependencies": {
+    "coap-packet": "^1.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22",
+    "eslint": "^10.15.0",
+    "prettier": "^3.10.1",
+    "typescript": "^6",
+    "typescript-eslint": "^8.74.0",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
+  },
+  "packageManager": "yarn@4.19.0+sha512.2cb9e5a36f7f11f2bc6ff444830d87368d419e0d83b6a0fb6077d3e6fed0f476c9514dff4ba4d84b049bd34ef32954e550f264ad2fbbfebcba6c89e869530bba"
+}
